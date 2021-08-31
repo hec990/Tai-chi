@@ -3,14 +3,78 @@ let page = document.querySelector(".page_box")
 let style = document.querySelector("#style")
 
 
-
-
 let string = `
+/*
+* 你好，我叫小何
+* 接下来我演示一下我的前端功底
+* 首先我要准备一个div
+* 然后将一个正方形盒子变成圆形
+*/
+.page {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 50%;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+	margin: 20px;
+	position: relative;
+}
 
+.top {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%)
+}
+.top::before {
+	display: inline-block;
+	content: "";
+	width: 50px;
+	height: 50px;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	top:35%;
+	left: 50%;
+	transform: translate(-50%)
+}
+
+.bottom::before {
+	display: inline-block;
+	content: "";
+	width: 50px;
+	height: 50px;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 35%;
+	left: 50%;
+	transform: translate(-50%)
+}
+
+
+.bottom {
+	width: 150px;
+	height: 150px;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+}
+/*
+* 好了，画完了
+* 
+*/
 `;
 let string2 = "";
 let n = 0;
-
+let time = 0;
 let step = () => {
 	setTimeout(() => {
 		// 如果是回车，就不照搬
@@ -31,7 +95,7 @@ let step = () => {
 			n += 1;
 			step();
 		}
-	}, 50);
+	}, time);
 };
 
-step(); // 1=>2
+step(); 
