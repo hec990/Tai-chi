@@ -24,6 +24,7 @@ let string = `
   rgba(0, 0, 0, 1) 100%);
   margin: 20px;
   position: relative;
+  animation:haha 10s;
 }
 
 .top {
