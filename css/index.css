@@ -1,45 +1,49 @@
 /* common css */
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 /* page css */
+
 body {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .code_box {
-	flex: 1;
-	height: 50vh;
-	border: 1px solid #ccc;
-	overflow: auto;
+    flex: 1;
+    height: 50vh;
+    border: 1px solid #ccc;
+    overflow: auto;
 }
 
 .page_box {
-	flex: 1;
-	height: 50vh;
-	border: 1px solid #ccc;
-	display: flex;
-	justify-content: center;
+    flex: 1;
+    height: 50vh;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
 }
+
 
 /* button css */
+
 .button {
-	position: fixed;
-	top: 30px;
-	right: 40px;
+    position: fixed;
+    top: 30px;
+    right: 40px;
 }
 
-.button div{
-	padding: 7px;
-	border: 1px solid black;
+.button div {
+    padding: 7px;
+    border: 1px solid black;
 }
+
 .button div:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
-

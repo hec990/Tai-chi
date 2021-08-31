@@ -82,26 +82,26 @@ let string2 = "";
 let n = 0;
 let times = 50;
 let step = () => {
-	setTimeout(() => {
-		// 如果是回车，就不照搬
-		// 如果不是回车就照搬
-		if (string[n] === "\n") {
-			string2 += "<br>";
-		} else if (string[n] === " ") {
-			string2 += "&nbsp;";
-		} else {
-			string2 += string[n];
-		}
-		code.innerHTML = string2;
-		style.innerHTML = string.substring(0, n);
-		window.scrollTo(0, 99999);
-		code.scrollTo(0, 99999);
-		if (n < string.length - 1) {
-			// 如果 n 不是最后一个,就继续
-			n += 1;
-			step();
-		}
-	}, times);
+    setTimeout(() => {
+        // 如果是回车，就不照搬
+        // 如果不是回车就照搬
+        if (string[n] === "\n") {
+            string2 += "<br>";
+        } else if (string[n] === " ") {
+            string2 += "&nbsp;";
+        } else {
+            string2 += string[n];
+        }
+        code.innerHTML = string2;
+        style.innerHTML = string.substring(0, n);
+        window.scrollTo(0, 99999);
+        code.scrollTo(0, 99999);
+        if (n < string.length - 1) {
+            // 如果 n 不是最后一个,就继续
+            n += 1;
+            step();
+        }
+    }, times);
 };
 
 step();
@@ -109,15 +109,12 @@ step();
 // button js
 
 slow.onclick = function() {
-	slow.style.background= "red";
-	times = 100;
+    times = 100;
 }
 middle.onclick = function() {
-	middle.style.background= "red";
-	times = 50;
+    times = 50;
 }
 
 fast.onclick = function() {
-	fast.style.background= "red";
-	times = 10;
+    times = 10;
 }
