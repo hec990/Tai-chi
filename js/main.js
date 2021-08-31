@@ -1,6 +1,9 @@
 let code = document.querySelector(".code_box")
 let page = document.querySelector(".page_box")
 let style = document.querySelector("#style")
+let slow = document.querySelector(".slow")
+let middle = document.querySelector(".middle")
+let fast = document.querySelector(".fast")
 
 
 let string = `
@@ -11,13 +14,16 @@ let string = `
 * 然后将一个正方形盒子变成圆形
 */
 .page {
-	width: 300px;
-	height: 300px;
-	border: 1px solid black;
-	border-radius: 50%;
-	background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
-	margin: 20px;
-	position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 1) 50%, 
+  rgba(0, 0, 0, 1) 50%, 
+  rgba(0, 0, 0, 1) 100%);
+  margin: 20px;
+  position: relative;
 }
 
 .top {
@@ -69,12 +75,12 @@ let string = `
 }
 /*
 * 好了，画完了
-* 
+* 这个太极送给你！
 */
 `;
 let string2 = "";
 let n = 0;
-let time = 0;
+let times = 50;
 let step = () => {
 	setTimeout(() => {
 		// 如果是回车，就不照搬
@@ -95,7 +101,23 @@ let step = () => {
 			n += 1;
 			step();
 		}
-	}, time);
+	}, times);
 };
 
-step(); 
+step();
+
+// button js
+
+slow.onclick = function() {
+	slow.style.background= "red";
+	times = 100;
+}
+middle.onclick = function() {
+	middle.style.background= "red";
+	times = 50;
+}
+
+fast.onclick = function() {
+	fast.style.background= "red";
+	times = 10;
+}

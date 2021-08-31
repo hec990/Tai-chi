@@ -28,3 +28,18 @@ body {
 	justify-content: center;
 }
 
+/* button css */
+.button {
+	position: fixed;
+	top: 30px;
+	right: 40px;
+}
+
+.button div{
+	padding: 7px;
+	border: 1px solid black;
+}
+.button div:hover {
+	cursor: pointer;
+}
+
