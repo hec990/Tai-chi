@@ -6,7 +6,7 @@ let middle = document.querySelector(".middle")
 let fast = document.querySelector(".fast")
 
 
-let string = `
+let content = `
 /*
 * 你好，我叫小何
 * 接下来我演示一下我的前端功底
@@ -79,25 +79,25 @@ let string = `
 * 这个太极送给你！
 */
 `;
-let string2 = "";
+let content2 = "";
 let n = 0;
 let times = 50;
 let step = () => {
     setTimeout(() => {
         // 如果是回车，就不照搬
         // 如果不是回车就照搬
-        if (string[n] === "\n") {
-            string2 += "<br>";
-        } else if (string[n] === " ") {
-            string2 += "&nbsp;";
+        if (content[n] === "\n") {
+            content2 += "<br>";
+        } else if (content[n] === " ") {
+            content2 += "&nbsp;";
         } else {
-            string2 += string[n];
+            content2 += content[n];
         }
-        code.innerHTML = string2;
-        style.innerHTML = string.substring(0, n);
+        code.innerHTML = content2;
+        style.innerHTML = content.substring(0, n);
         window.scrollTo(0, 99999);
         code.scrollTo(0, 99999);
-        if (n < string.length - 1) {
+        if (n < content.length - 1) {
             // 如果 n 不是最后一个,就继续
             n += 1;
             step();
